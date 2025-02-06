@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="product-container">
+            <div class="product-gallery">
+                <img src="shoes1.jpg" alt="Product Image" class="main-image">
+                <div class="thumbnails">
+                    <img src="shoes2.jpg" alt="Thumbnail 1" class="thumb">
+                    <img src="shoes3.jpg" alt="Thumbnail 2" class="thumb">
+                    <img src="shoes4.jpg" alt="Thumbnail 3" class="thumb">
+                </div>
+            </div>
+            <div class="product-details">
+                <h1>Product Name</h1>
+                <p class="description">Bacca Bucci Men's Torque Rugged Edge Activewear Sneakers Step Into High-Octane Style Where Performance Meets Urban Edge</p>
+                <p class="price">₹2,399</p>
+                <div class="product-details">
+                    <h2>Product Details</h2>
+                    <ul>
+                        <li><strong>Material Type:</strong> Synthetic Polyurethane (PU), TPU and Lycra</li>
+                        <li><strong>Closure Type:</strong> Lace-Up</li>
+                        <li><strong>Heel Type:</strong> Flat</li>
+                        <li><strong>Water Resistance Level:</strong> Not Water Resistant</li>
+                        <li><strong>Sole Material:</strong> EVA and Rubber</li>
+                        <li><strong>Style:</strong> Casual Sneakers</li>
+                        <li><strong>Country of Origin:</strong> India</li>
+                    </ul>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Your E-Commerce Store</p>
+    </footer>
+    
+    <script>
+        const mainImage = document.querySelector('.main-image');
+        const thumbnails = document.querySelectorAll('.thumb');
+        
+        thumbnails.forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                mainImage.src = thumb.src;
+            });
+        });
+    </script>
+</body>
+</html>
